@@ -43,13 +43,17 @@ DEFAULT_DATA_PATH = os.path.join("data", "sample_arxiv_data.csv")
 
 @st.cache_resource
 def ensure_nltk_data():
-    """Make sure required NLTK resources are available."""
+    """Make sure required NLTK resources are available (cloud-safe)."""
     resources = [
         ("tokenizers/punkt", "punkt"),
+        ("tokenizers/punkt_tab", "punkt_tab"),
         ("corpora/stopwords", "stopwords"),
         ("corpora/wordnet", "wordnet"),
         ("corpora/omw-1.4", "omw-1.4"),
         ("taggers/averaged_perceptron_tagger", "averaged_perceptron_tagger"),
+        ("taggers/averaged_perceptron_tagger_eng", "averaged_perceptron_tagger_eng"),
+        ("chunkers/maxent_ne_chunker", "maxent_ne_chunker"),
+        ("corpora/words", "words"),
     ]
     for path, package in resources:
         try:
