@@ -1,0 +1,64 @@
+# ============================================================
+#  ResearchMate AI — .gitignore
+# ============================================================
+
+# ------ Python ------
+__pycache__/
+*.py[cod]
+*.class
+*.pyo
+*.pyd
+*.so
+
+# ------ Virtual environments ------
+venv/
+.venv/
+env/
+ENV/
+.env/
+
+# ------ Environment / secrets ------
+.env
+.env.*
+*.env
+secrets.toml
+api_keys.py
+
+# ------ Streamlit cache ------
+.streamlit/secrets.toml
+
+# ------ Large dataset files ------
+data/arXiv_scientific_dataset.csv
+data/*.db
+
+# ------ OS-generated files ------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ------ IDE / Editor files ------
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+*.swo
+
+# ------ Pytest / Coverage ------
+.pytest_cache/
+htmlcov/
+.coverage
+*.cover
+
+# ------ Build artifacts ------
+dist/
+build/
+*.egg-info/
+
+# ------ Logs ------
+*.log
+
+# ------ Temporary files ------
+*.tmp
+*.bak
+*.orig
